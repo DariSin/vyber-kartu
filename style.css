@@ -41,7 +41,7 @@ article::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: url('/images/pozadi.png') no-repeat center center / cover;
+  background: url('/pozadi.png') no-repeat center center / cover;
   background-size:60% auto;
   opacity: 0.1; /* nastav průhlednost - 12% */
   pointer-events: none; /* aby obrázek neblokoval interakce */
