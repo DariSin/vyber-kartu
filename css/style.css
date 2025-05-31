@@ -1,0 +1,79 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fce2e2;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  
+}
+
+article {
+  max-width: 550px;
+  margin: 20px auto;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, #fefefe, #f2f2f2);
+  border: 1px solid hsl(0, 0%, 87%);
+  border-left: 6px solid #0e6b70; /* barevný akcentní pruh vlevo */
+  border-radius: 10px;  
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.8;
+  position: relative;
+  overflow: hidden;
+  text-align:center;
+}
+
+
+article h2 {
+  font-size: 1.4rem;
+  margin-top: 0;
+  color: #0e6b70;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+}
+
+
+/* Pseudoelement s obrázkem na pozadí */
+article::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('/images/pozadi.png') no-repeat center center / cover;
+  background-size:60% auto;
+  opacity: 0.1; /* nastav průhlednost - 12% */
+  pointer-events: none; /* aby obrázek neblokoval interakce */
+  border-radius: 10px; /* stejný radius jako article */
+  z-index: 0;
+}
+
+/* Obsah article musí být nad obrázkem */
+article > * {
+  position: relative;
+  z-index: 1;
+}
+
+.text {
+
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #444;
+  text-align: center; 
+  
+}
+
+.intro-heading {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #b5187c;
+  margin-top:1px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+
+
